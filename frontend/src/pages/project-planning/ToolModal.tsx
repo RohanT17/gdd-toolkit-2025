@@ -2,13 +2,14 @@ import "./ToolModal.css";
 
 type Bullet = {
     text: string;
+    image?: string;
     sub_bullets: Bullet[];
 };
 
 type ProjectPlanningTool = {
     name: string;
-    type: string;
-    time: string;
+    type: string[];
+    time: string[];
     image: string;
     learning_obj: Bullet[];
     characteristics: Bullet[];
@@ -28,13 +29,13 @@ export default function ToolModal({
     tool: ProjectPlanningTool;
     onClose: () => void;
 }) {
-    const typeColors: Record<ProjectPlanningTool["type"], string> = {
+    const typeColors: Record<string, string> = {
         "Six Sigma": "#dbeafe",
         "Process Mapping": "#fef3c7",
         "Decision Making": "#fce7f3",
     };
 
-    const timeColors: Record<ProjectPlanningTool["time"], string> = {
+    const timeColors: Record<string, string> = {
         "Short-term": "#dcfce7",
         "Long-term": "#fee2e2",
     };
@@ -57,18 +58,25 @@ export default function ToolModal({
                 <div className="modal-section modal-card">
                     <h3>Keywords</h3>
                     <div className="keywords-wrapper">
-                        <span
-                            className="keyword-badge"
-                            style={{ backgroundColor: typeColors[tool.type] }}
-                        >
-                            {tool.type}
-                        </span>
-                        <span
-                            className="keyword-badge"
-                            style={{ backgroundColor: timeColors[tool.time] }}
-                        >
-                            {tool.time}
-                        </span>
+                        {tool.type.map((ty) => (
+                                <span
+                                    key={ty}
+                                    className="tool-badge"
+                                    style={{ backgroundColor: typeColors[ty] }}
+                                >
+                                    {ty}
+                                </span>
+                            ))}
+
+                            {tool.time.map((ti) => (
+                                <span
+                                    key={ti}
+                                    className="tool-badge"
+                                    style={{ backgroundColor: timeColors[ti] }}
+                                >
+                                    {ti}
+                                </span>
+                            ))}
                     </div>
                 </div>
 
@@ -145,24 +153,50 @@ export default function ToolModal({
 }
 
 function BulletList({ bullets, isLink }: { bullets: Bullet[], isLink?: boolean }) {
+    // Recursive function to render bullets and all nested sub-bullets
+    const renderBullet = (b: Bullet) => (
+        <>
+            {/* Bullet text */}
+            {isLink ? (
+                <a href={b.text} target="_blank" rel="noopener noreferrer">
+                    {b.text}
+                </a>
+            ) : (
+                b.text
+            )}
+
+            {/* Recursive sub-bullets */}
+            {b.sub_bullets.length > 0 && (
+                <ul className="sub-bullet-list">
+                    {b.sub_bullets.map((sb, j) => (
+                        <li key={j}>
+                            {renderBullet(sb)}
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            {/* Image after all nested sub-bullets */}
+            {b.image && (
+                <img
+                    src={b.image}
+                    alt="Bullet illustration"
+                    style={{
+                        display: "block",
+                        marginTop: "0.5rem",
+                        maxWidth: "100%",
+                        borderRadius: "0.5rem",
+                    }}
+                />
+            )}
+        </>
+    );
+
     return (
         <ul className="bullet-list">
             {bullets.map((b, i) => (
                 <li key={i}>
-                    {isLink ? (
-                        <a href={b.text} target="_blank" rel="noopener noreferrer">
-                            {b.text}
-                        </a>
-                    ) : (
-                        b.text
-                    )}
-                    {b.sub_bullets.length > 0 && (
-                        <ul className="sub-bullet-list">
-                            {b.sub_bullets.map((sb, j) => (
-                                <li key={j}>{isLink ? <a href={sb.text} target="_blank" rel="noopener noreferrer">{sb.text}</a> : sb.text}</li>
-                            ))}
-                        </ul>
-                    )}
+                    {renderBullet(b)}
                 </li>
             ))}
         </ul>

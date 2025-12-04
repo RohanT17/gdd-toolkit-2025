@@ -11,6 +11,9 @@ const EthicsOfInnovation = lazy(() => import ("@/pages/tools/ethics-of-innovatio
 const DesignUser = lazy(() => import("@/pages/tools/ethics-of-innovation/DesignUser"));
 const ExistingEcosystems = lazy(() => import("@/pages/tools/ethics-of-innovation/ExistingEcosystems"));
 const Scale = lazy(() => import("@/pages/tools/ethics-of-innovation/Scale"));
+const Sustainability = lazy(() => import("@/pages/tools/ethics-of-innovation/Sustainability"));
+const DataDriven = lazy(() => import("@/pages/tools/ethics-of-innovation/DataDriven"));
+const OpenStandards = lazy(() => import("@/pages/tools/ethics-of-innovation/OpenStandards"));
 const ReuseImprove = lazy(() => import("@/pages/tools/ethics-of-innovation/ReuseImprove"));
 const AddressSecurity = lazy(() => import("@/pages/tools/ethics-of-innovation/AddressSecurity"));
 const Collaborative = lazy(() => import("@/pages/tools/ethics-of-innovation/Collaborative"));
@@ -20,6 +23,7 @@ const ProjectEvaluation = lazy(() => import("@/pages/tools/ProjectEvaluation"));
 const CaseStudies = lazy(() => import ("@/pages/case-studies/CaseStudies"));
 const CaseStudyDetail = lazy(() => import("@/pages/case-studies/CaseStudyDetail"));
 const FundingSources = lazy(() => import ("@/pages/resources/FundingSources"));
+const Acknowledgements = lazy(() => import ("@/pages/about/Acknowledgements"));
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,9 @@ const router = createBrowserRouter([
       { path: "ethics-of-innovation/user", element: <DesignUser />},
       { path: "ethics-of-innovation/ecosystem", element: <ExistingEcosystems />},
       { path: "ethics-of-innovation/scale", element: <Scale />},
+      { path: "ethics-of-innovation/sustainability", element: <Sustainability />},
+      { path: "ethics-of-innovation/data-driven", element: <DataDriven />},
+      { path: "ethics-of-innovation/open-standards", element: <OpenStandards />},
       { path: "ethics-of-innovation/reuse", element: <ReuseImprove />},
       { path: "ethics-of-innovation/privacy", element: <AddressSecurity />},
       { path: "ethics-of-innovation/collaboration", element: <Collaborative />},
@@ -44,6 +51,7 @@ const router = createBrowserRouter([
       { path: "case-studies", element: <CaseStudies />},
       { path: "case-studies/:id", element: <CaseStudyDetail />},
       { path: "funding-sources", element: <FundingSources />},
+      { path: "acknowledgements", element: <Acknowledgements />},
     ],
   },
 ]);
