@@ -1,4 +1,5 @@
 version: 1
+
 frontend:
   phases:
     preBuild:
@@ -7,6 +8,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - cd frontend
         - npm run build
   artifacts:
     baseDirectory: frontend/dist
@@ -14,5 +16,10 @@ frontend:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/*
       - frontend/node_modules/**/*
+      
+backend:
+  phases:
+    build:
+      commands:
+        - amplifyPush --simple
