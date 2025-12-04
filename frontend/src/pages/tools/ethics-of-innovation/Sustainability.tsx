@@ -135,8 +135,8 @@ const Sustainability: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
-                        <li> <a href="https://digitalprinciples.org/principle/design-with-the-user/"> Design With the User | Principles for Digital Development  </a></li>
-                        <li> <a href="https://docs.google.com/document/d/1YANkLGuVjMbZzCjkyjj_xygvEJYvPsCdM2YNOwmeki4/edit"> FIRE Framework Layout </a></li>
+                        <li> <a href="https://digitalprinciples.org/principle/build-for-sustainability/"> Build for Sustainability | Principles for Digital Development  </a></li>
+                        <li> <a href="https://link.springer.com/article/10.1007/s11625-010-0117-x"> Structuring sustainability science </a></li>
                     </motion.ul>
                 </div>
             </section>
@@ -153,87 +153,10 @@ const Sustainability: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
-                        Grocki, M. (2014). 
-                        <a href="https://www.youtube.com/watch?v=mSxpVRo3BLg&t=175s"> How to create a Customer Journey Map. </a> UX Mastery. YouTube. 
+                        <a href="https://www.who.int/reproductivehealth/topics/mhealth/maps-toolkit/en/"> https://www.who.int/reproductivehealth/topics/mhealth/maps-toolkit/en/</a> 
                         <br></br>
-                        In this short video, Megan Grocki details the step by step process of thinking through customer journey mapping. 
-                        While the resource uses a market, for-profit driven example, the same process is useful to explore user experience 
-                        for development project deliverables. 
+                        The case study above also incorporates the design principle of building for sustainability by showcasing the exact support and contributions needed from stakeholders. This study allows for users to easily understand the ultimate goal of their research and it’s continuous impact.
                     </motion.p>
-                    <div className="case-video-wrapper">
-                        <iframe
-                            className="case-video"
-                            src="https://www.youtube.com/embed/mSxpVRo3BLg?start=175"
-                            title="How to Create a Customer Journey Map"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-
-                </div>
-            </section>
-
-            {/* --- Section 5: Empathy Mapping Resources --- */}
-            <section className="content-section">
-                <div className="content-card">
-                    <h2 className="simulation-title">
-                        Empathy Mapping Resources
-                    </h2>
-                    <motion.p
-                        className="simulation-text"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, ease: easeOut }}
-                    >
-                        <a href="https://www.youtube.com/watch?v=QwF9a56WFWA"> What is an Empathy Map?</a> PlaybookUX. YouTube. 
-                        <br></br>
-                        This video by PlaybookUX provides a guide to empathy mapping strategies in order to understand and later be able 
-                        to build a relationship with the recipients of the project.
-                    </motion.p>
-                    <div className="case-video-wrapper">
-                        <iframe
-                            className="case-video"
-                            src="https://www.youtube.com/embed/QwF9a56WFWA"
-                            title="What is an Empathy Map?"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </div>
-            </section>
-
-            {/* --- Section 6: Design Thinking MIT --- */}
-            <section className="content-section">
-                <div className="content-card">
-                    <h2 className="simulation-title">
-                        Design Thinking MIT
-                    </h2>
-                    <motion.p
-                        className="simulation-text"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, ease: easeOut }}
-                    >
-                        Altitude (2017). 
-                        <a href="https://www.youtube.com/watch?v=kq2kd3CXi1o"> Design Thinking Video from MIT and Altitude.</a> YouTube. 
-                        <br></br>
-                        This resource takes an inside journey through MIT and Altitude’s process of designing a functional walker for the 
-                        elderly. It gives a good look at the interview and review process with the very demographic the product is intended 
-                        for. By interacting one-on-one with potential consumers, Altitude and MIT make sure that the product truly suits 
-                        their needs. Though ethical development projects may have different needs and aims than companies with a for-profit 
-                        mission, we can use some of the same considerations that help involve the consumer as for profit and industry driven
-                        products – because in the end, we are designing a product or service and that product should be something 
-                        functional that people feel ownership of and want to use.
-                    </motion.p>
-                    <div className="case-video-wrapper">
-                        <iframe
-                            className="case-video"
-                            src="https://www.youtube.com/embed/v=kq2kd3CXi1o"
-                            title="Design Thinking Video from MIT and Altitude."
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
                 </div>
             </section>
             <br></br>
