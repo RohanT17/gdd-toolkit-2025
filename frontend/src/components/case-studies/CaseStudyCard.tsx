@@ -30,17 +30,32 @@ function PlaceholderImage({ name }: { name: string }) {
   );
 }
 
+// Image overrides for specific case studies (local images in public folder)
+const IMAGE_OVERRIDES: Record<string, string> = {
+  // Flint water crisis - use local image if case study name contains "Flint" (case-insensitive)
+  flint: "/assets/images/flint-water-crisis.png",
+  // Love Canal Tragedy - use local image if case study name contains "Love Canal" (case-insensitive)
+  "love canal": "/assets/images/love-canal-tradgedy.png",
+};
+
 export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   const navigate = useNavigate();
   const [imageError, setImageError] = useState(false);
+
+  // Check for image override first (by case study name)
+  const caseStudyNameLower = caseStudy.name?.toLowerCase() || "";
+  const overrideKey = Object.keys(IMAGE_OVERRIDES).find(key => 
+    caseStudyNameLower.includes(key)
+  );
+  const overrideImage = overrideKey ? IMAGE_OVERRIDES[overrideKey] : null;
 
   // Convert S3 URI to HTTPS URL if needed
   // Handle null, undefined, empty string, or missing image fields
   const rawImage = caseStudy.image;
   const hasValidImage = rawImage && typeof rawImage === 'string' && rawImage.trim().length > 0;
-  const imgUrl = hasValidImage 
+  const imgUrl = overrideImage || (hasValidImage 
     ? (s3UriToHttps(rawImage) || rawImage)
-    : null;
+    : null);
 
   // Truncate description to ~200-250 characters
   const truncateText = (text: string | undefined, maxLength: number = 220): string => {
