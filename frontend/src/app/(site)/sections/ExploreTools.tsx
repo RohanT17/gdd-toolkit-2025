@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ToolsCarousel, { type ToolSlide } from "@/components/ToolsCarousel";
-import { Compass, Sparkles, BookOpen, Users, ClipboardList, BarChart } from "lucide-react";
+import { Compass, BookOpen, Users, ClipboardList, BarChart } from "lucide-react";
 
 const toolSlides: ToolSlide[] = [
   {
