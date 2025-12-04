@@ -24,7 +24,7 @@ const MENUS: Menu[] = [
     label: 'Tools',
     items: [
       { label: 'AI Business Ethics Canvas', href: '/ai-business-ethics-canvas' },
-      { label: 'AI Ethics Dashboard', href: 'https://main.dcwwj0wxym0na.amplifyapp.com/' },
+      { label: 'AI Ethics Dashboard', href: 'https://main.dc0y8ib3ovhbx.amplifyapp.com/' },
       { label: 'Ethics of Innovation', href: '/ethics-of-innovation' },
       { label: 'Human Centered Design', href: '/human-centered-design' },
       { label: 'Project Planning', href: '/project-planning' },
@@ -39,8 +39,7 @@ const MENUS: Menu[] = [
     items: [
       { label: 'Funding Sources', href: '/funding-sources' }
     ]
-  },
-  { label: 'Contacts', href: '/contacts' }
+  }
 ]
 
 export default function Navbar() {
