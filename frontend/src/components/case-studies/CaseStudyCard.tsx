@@ -9,7 +9,7 @@ import type { CaseStudy } from "@/types/caseStudies";
 import { s3UriToHttps } from "@/utils/s3";
 
 interface CaseStudyCardProps {
-  caseStudy: CaseStudy;
+  caseStudy: CaseStudy & { segment?: "worthwhile" | "maldevelopment" };
 }
 
 /**
@@ -77,6 +77,21 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
 
         {/* Content */}
         <div className="p-5 flex-1 flex flex-col">
+          {/* Segment Label */}
+          {caseStudy.segment && (
+            <div className="mb-2">
+              <span
+                className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium ${
+                  caseStudy.segment === "worthwhile"
+                    ? "bg-emerald-100 text-emerald-700"
+                    : "bg-red-100 text-red-700"
+                }`}
+              >
+                {caseStudy.segment === "worthwhile" ? "Worthwhile Development" : "Maldevelopment"}
+              </span>
+            </div>
+          )}
+
           {/* Title */}
           <h3 className="text-lg font-semibold mb-3 text-gray-900 line-clamp-2">
             {caseStudy.name}

@@ -7,7 +7,7 @@ import CaseStudyCard from "./CaseStudyCard";
 import type { CaseStudy } from "@/types/caseStudies";
 
 interface CaseStudiesGridProps {
-  caseStudies: CaseStudy[];
+  caseStudies: (CaseStudy & { segment?: "worthwhile" | "maldevelopment" })[];
   searchQuery?: string;
 }
 

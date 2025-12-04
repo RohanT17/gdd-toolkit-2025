@@ -1,29 +1,74 @@
 /**
  * CaseStudiesPage - Main page component for the Case Studies section
- * Features: search bar, segment selector (Worthwhile Development/Maldevelopment), and magazine-style grid
- * Worthwhile Development combines Projects + Policies; Maldevelopment is a separate segment
+ * Features: search bar and magazine-style grid with all case studies
+ * Each card is labeled as either "Worthwhile Development" or "Maldevelopment"
  */
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useCaseStudiesBySegment } from "@/hooks/useCaseStudiesBySegment";
 import CaseStudiesGrid from "@/components/case-studies/CaseStudiesGrid";
 import CaseStudyModal from "@/components/case-studies/CaseStudyModal";
 import { fetchWorthwhile, fetchMaldevelopment } from "@/api/caseStudies";
-import type { CaseStudySegment, CaseStudy } from "@/types/caseStudies";
+import type { CaseStudy } from "@/types/caseStudies";
+
+// Extended CaseStudy type with segment label
+type CaseStudyWithSegment = CaseStudy & {
+  segment: "worthwhile" | "maldevelopment";
+};
 
 export default function CaseStudies() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [activeSegment, setActiveSegment] = useState<CaseStudySegment>("worthwhile");
+  const [allCaseStudies, setAllCaseStudies] = useState<CaseStudyWithSegment[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-    const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Fetch case studies for the active segment
-  const { loading, error, filterBySearch } = useCaseStudiesBySegment(activeSegment);
+  // Fetch all case studies (both worthwhile and maldevelopment)
+  useEffect(() => {
+    async function loadAllCaseStudies() {
+      try {
+        setLoading(true);
+        setError(null);
+        const [worthwhile, maldevelopment] = await Promise.all([
+          fetchWorthwhile().catch(() => []),
+          fetchMaldevelopment().catch(() => []),
+        ]);
+
+        // Combine and label each case study with its segment
+        const worthwhileWithSegment: CaseStudyWithSegment[] = worthwhile.map(cs => ({
+          ...cs,
+          segment: "worthwhile" as const,
+        }));
+        const maldevelopmentWithSegment: CaseStudyWithSegment[] = maldevelopment.map(cs => ({
+          ...cs,
+          segment: "maldevelopment" as const,
+        }));
+
+        setAllCaseStudies([...worthwhileWithSegment, ...maldevelopmentWithSegment]);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to load case studies");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadAllCaseStudies();
+  }, []);
 
   // Filter case studies based on search query
-  const filteredCaseStudies = filterBySearch(searchQuery);
+  const filteredCaseStudies = allCaseStudies.filter((study) => {
+    if (!searchQuery.trim()) return true;
+    const query = searchQuery.toLowerCase();
+    return (
+      study.name?.toLowerCase().includes(query) ||
+      study.description?.toLowerCase().includes(query) ||
+      study.keywords?.some((kw) => kw.toLowerCase().includes(query)) ||
+      study.regions?.some((r) => r.toLowerCase().includes(query)) ||
+      study.values?.some((v) => v.toLowerCase().includes(query))
+    );
+  });
 
   // Check for case study ID in URL and open modal
   useEffect(() => {
@@ -58,8 +103,8 @@ export default function CaseStudies() {
     setSearchParams(newSearchParams, { replace: true });
   };
 
-  // Render content based on active segment
-  const renderSegmentContent = () => {
+  // Render content
+  const renderContent = () => {
     if (loading) {
       return (
         <div className="text-center py-12">
@@ -70,7 +115,7 @@ export default function CaseStudies() {
     }
 
     if (error) {
-        return (
+      return (
         <div className="text-center py-12">
           <p className="text-red-600 text-lg mb-2">Failed to load case studies.</p>
           <p className="text-gray-500">Please try again later.</p>
@@ -106,34 +151,8 @@ export default function CaseStudies() {
                         />
                     </div>
 
-        {/* Segment Control */}
-        <div className="mb-8 flex justify-center">
-          <div className="flex flex-wrap gap-2 bg-white p-1 rounded-lg shadow-sm">
-                                <button
-              onClick={() => setActiveSegment("worthwhile")}
-              className={`px-6 py-2 rounded-md font-medium transition-all ${
-                activeSegment === "worthwhile"
-                  ? "bg-sky-600 text-white shadow-md"
-                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-              }`}
-            >
-              Worthwhile Development
-                                </button>
-                                <button
-              onClick={() => setActiveSegment("maldevelopment")}
-              className={`px-6 py-2 rounded-md font-medium transition-all ${
-                activeSegment === "maldevelopment"
-                  ? "bg-sky-600 text-white shadow-md"
-                  : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-              }`}
-            >
-              Maldevelopment
-                                </button>
-                </div>
-                    </div>
-
         {/* Grid Content */}
-        {renderSegmentContent()}
+        {renderContent()}
       </main>
 
       {/* Case Study Modal */}
