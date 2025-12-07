@@ -23,7 +23,7 @@ const MENUS: Menu[] = [
   {
     label: 'Tools',
     items: [
-      { label: 'AI Business Ethics Canvas', href: '/ai-business-ethics-canvas' },
+      { label: 'AI Business Ethics Canvas', href: 'https://main.dn6y4rvhmhz3f.amplifyapp.com/' },
       { label: 'AI Ethics Dashboard', href: 'https://main.dc0y8ib3ovhbx.amplifyapp.com/' },
       { label: 'Ethics of Innovation', href: '/ethics-of-innovation' },
       { label: 'Human Centered Design', href: '/human-centered-design' },

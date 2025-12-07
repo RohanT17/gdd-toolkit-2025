@@ -113,7 +113,7 @@ const DesignUser: React.FC = () => {
                         className="checklist-item"
                     >
                         <span className="checkmark">✔</span>
-                        <p> Out of all the voices heard in designing with the user are you possibly leaving anyone out? </p>
+                        <p> Out of all the voices heard in designing with the User are you possibly leaving anyone out? </p>
                     </motion.li>
                     </ul>
                 </div>
@@ -155,7 +155,7 @@ const DesignUser: React.FC = () => {
                         <br></br>
                         In this short video, Megan Grocki details the step by step process of thinking through customer journey mapping. 
                         While the resource uses a market, for-profit driven example, the same process is useful to explore user experience 
-                        for development project deliverables. 
+                        for developing project deliverables. 
                     </motion.p>
                     <div className="case-video-wrapper">
                         <iframe

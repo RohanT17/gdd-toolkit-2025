@@ -155,7 +155,7 @@ const Sustainability: React.FC = () => {
                     >
                         <a href="https://www.who.int/reproductivehealth/topics/mhealth/maps-toolkit/en/"> https://www.who.int/reproductivehealth/topics/mhealth/maps-toolkit/en/</a> 
                         <br></br>
-                        The case study above also incorporates the design principle of building for sustainability by showcasing the exact support and contributions needed from stakeholders. This study allows for users to easily understand the ultimate goal of their research and it’s continuous impact.
+                        The case study above also incorporates the design principle of building for sustainability by showcasing the exact support and contributions needed from stakeholders. This study allows for users to easily understand the ultimate goal of their research and its continuous impact.
                     </motion.p>
                 </div>
             </section>

@@ -28,7 +28,7 @@ const DevelopmentEthics: React.FC = () => {
                     animate="visible"
                     variants={bannerVariants}
                 >
-                    Drawing on the legacy of the Brundtland Commission (1987) and the UN’s 2030 Agenda for Sustainable Development.
+                    Designing social impact projects that are effective, inclusive, and ethical shouldn’t depend on where you live or the resources you have access to.
                 </motion.p>
             </header>
 
@@ -44,8 +44,6 @@ const DevelopmentEthics: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
-                    Designing social impact projects that are effective, inclusive, and ethical shouldn’t depend on where you live or the resources you have access to.
-                    <br></br><br></br>
                     The First-Year Innovation & Research Experience stream Global Development & Design at the University of Maryland 
                     brings together Global Development and Design Thinking to answer a pressing question: <i>What does sustainable worthwhile
                     development really look like around the world, and how can we help practitioners address it ethically?</i> The field of 
@@ -62,7 +60,7 @@ const DevelopmentEthics: React.FC = () => {
             <section className="content-section">
                 <div className="content-card">
                     <h2 ref={simulationRef} className="simulation-title">
-                        A Free, Open-Access Platform with Scaleability for Ethical and Human-Centered Development
+                        A Free, Open-Access Platform with Scalability for Ethical and Human-Centered Development
                     </h2>
                     <motion.p
                         className="simulation-text"
@@ -217,7 +215,7 @@ const DevelopmentEthics: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
-                    We believe that ethical development should be assessable by everyone. Our vision is a world where every development project, program or policy, whether launched by an intergovernmental organization like the United Nations or World Bank , a community organizer, an NGO, or a group of undergraduate research students advances the values of worthwhile development. 
+                    We believe that ethical development should be assessable by everyone. Our vision is a world where every development project, program, or policy, whether launched by an intergovernmental organization like the United Nations or World Bank, a community organizer, an NGO, or a group of undergraduate research students advances the values of worthwhile development. 
                     </motion.p>
                 </div>
             </section>
@@ -288,7 +286,7 @@ const DevelopmentEthics: React.FC = () => {
                         className="checklist-item"
                     >
                         <span className="checkmark">✔</span>
-                        <p>Will development negatively impact the environment? Leading to possible deterioration of the land?</p>
+                        <p>Will development negatively impact the environment leading to possible deterioration of the land?</p>
                     </motion.li>
 
                     <motion.li
@@ -298,7 +296,7 @@ const DevelopmentEthics: React.FC = () => {
                         className="checklist-item"
                     >
                         <span className="checkmark">✔</span>
-                        <p>Will development play a role in the erasure of culture?(language, Religion, etc.)</p>
+                        <p>Will development play a role in the erasure of culture? (language, religion, etc.)</p>
                     </motion.li>
 
                     <motion.li
@@ -358,7 +356,7 @@ const DevelopmentEthics: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
-                        Question Number 1 serves as the principle question that one must ask themselves before embarking on a development project. If the answer both number 1 and 2 are “No” it is strongly encouraged that one should reconsider thoughts of development. If the answers on questions 3-7 are “Yes” it is also encouraged to reconsider thoughts on development. However, If the answer to question 1 is “yes” regardless of whether the people called for development it is encouraged to begin project planning, and give back the basic rights that they were deprived of.
+                        The first question serves as the principal question that one must ask before embarking on a development project. If the answers to both the first and second questions are “No,” it is strongly encouraged that you reconsider pursuing development. If the answers to the third through seventh questions are “Yes,” it is also recommended to reconsider moving forward with development. However, if the answer to the first question is “Yes,” then regardless of whether the community explicitly called for development, it is encouraged to begin project planning and restore the basic rights they have been deprived of.
                     </motion.p>
                 </div>
             </section>
@@ -385,7 +383,7 @@ const DevelopmentEthics: React.FC = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.4 }}
                         >
-                            Another United Nations resource is the 2019 Human Development Report, Beyond income, beyond averages, beyond today: Inequalities in human development in the 21st century, which contains detailed information about progress in development and is filled with informative and helpful graphs. It additionally provides a wealth of information regarding what still needs to be done to better development. 
+                            Another United Nations resource is the 2019 Human Development Report, "Beyond Income, Beyond Averages, Beyond Today: Inequalities in Human Development in the 21st Century", which contains detailed information about progress in development and is filled with informative and helpful graphs. It additionally provides a wealth of information regarding what still needs to be done to better development. 
                         </motion.li>
 
                         <motion.li
@@ -410,50 +408,78 @@ const DevelopmentEthics: React.FC = () => {
             </section>
 
             {/* --- Section 6: References --- */}
-            <section className="content-section">
-                <div className="content-card">
-                    <h2 ref={simulationRef} className="simulation-title">
-                        References
-                    </h2>
-                    <ol className="numbered-list">
-                        <motion.li
-                            className="numbered-item"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4 }}
-                        >
-                            Deneulin, S. (2013). Ethics and Development: An Introduction from the Perspective of the Capability Approach. Geography Compass, 217-227. doi:10.1111/gec3.12029
-                        </motion.li>
+<section className="content-section">
+    <div className="content-card">
+        <h2 ref={simulationRef} className="simulation-title">
+            References
+        </h2>
 
-                        <motion.li
-                            className="numbered-item"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4 }}
-                        >
-                            Gasper, D. (2006). Introduction: Working in Development Ethics – a tribute to Denis Goulet. Éthique Et économique, 1-24. Retrieved December 11, 2020, from https://papyrus.bib.umontreal.ca/xmlui/handle/1866/3377
-                        </motion.li>
+        <ol className="numbered-list">
 
-                        <motion.li
-                            className="numbered-item"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4 }}
-                        >
-                            Goulet, D. (1997). Development ethics: A new discipline. International Journal of Social Economics, 24(11), 1160-1171. doi:10.1108/03068299710193543
-                        </motion.li>
+            <motion.li
+                className="numbered-item"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                Deneulin, S. (2013). <i>Ethics and Development: An Introduction from the
+                Perspective of the Capability Approach.</i> Geography Compass, 217–227. <a
+                    href="https://doi.org/10.1111/gec3.12029"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 underline"
+                >
+                    https://doi.org/10.1111/gec3.12029
+                </a>
+            </motion.li>
 
-                        <motion.li
-                            className="numbered-item"
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4 }}
-                        >
-                            Ross-Larson, B., & Hanlon, E. (Eds.). (1990). UNDP Human Development Report 1990 (Rep.). New York, NY: Oxford University Press.
-                        </motion.li>
-                    </ol>
-                </div>
-            </section>
+            <motion.li
+                className="numbered-item"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                Gasper, D. (2006). Introduction: Working in Development Ethics – a tribute to Denis Goulet.
+                <i> Éthique Et économique</i>, 1–24. Retrieved December 11, 2020 from <a
+                    href="https://papyrus.bib.umontreal.ca/xmlui/handle/1866/3377"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 underline"
+                >
+                    https://papyrus.bib.umontreal.ca/xmlui/handle/1866/3377
+                </a>
+            </motion.li>
+
+            <motion.li
+                className="numbered-item"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                Goulet, D. (1997). Development ethics: A new discipline.
+                <i> International Journal of Social Economics</i>, 24(11), 1160–1171. <a
+                    href="https://doi.org/10.1108/03068299710193543"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-700 underline"
+                >
+                    https://doi.org/10.1108/03068299710193543
+                </a>
+            </motion.li>
+
+            <motion.li
+                className="numbered-item"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+            >
+                Ross-Larson, B., & Hanlon, E. (Eds.). (1990). <i>UNDP Human Development Report 1990.</i> New York, NY: Oxford University Press.
+            </motion.li>
+
+        </ol>
+    </div>
+</section>
+
             <br></br>
         </div>
     );

@@ -248,6 +248,35 @@ const ProjectEvaluation: React.FC = () => {
                     </ol>
                 </div>
             </section>
+
+            {/* --- Section 6: Tool Presentation--- */}
+            <section className="content-section">
+                <div className="content-card">
+                    <h2 ref={simulationRef} className="simulation-title">
+                        The Evaluation Tool
+                    </h2>
+                    <motion.p
+                        className="simulation-text"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, ease: easeOut }}
+                    >
+                        Walk through the Project Evaluation simulation. It will ask you a series of questions in three phases: 1) the project design phase, 2) the project implementation phase, and 3) the project outcomes phase.
+                        <br></br><br></br>
+                        <a
+                            href="https://www.canva.com/design/DAGlZMBzaxs/kfHOiechitv_JGXKeMXwCA/view?utm_content=DAGlZMBzaxs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0806b2bb8d#1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-emerald-600 font-semibold underline hover:text-emerald-700 transition-colors"
+                        >
+                            Click to use the simulation and evaluate your project, program, and/or policy
+                        </a>
+                        <br></br><br></br>
+                        Disclaimer: The <a href="/case-studies">case studies</a> provided here are evalated with an older methodology, where a letter grade (A, B, C, F)
+                        is given for each value of worthwhile development based on the number of indicators checked for that value (0-1 = F (Poor), 2-3 = C (Developing), 4 = B (Sufficient), 5 = A (Superior)).
+                    </motion.p>
+                </div>
+            </section>
             <br></br>
         </div>
     );

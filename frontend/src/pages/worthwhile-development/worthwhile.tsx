@@ -121,13 +121,13 @@ const goals = [
   {
     title: "Responsibility",
     desc:
-      "Act with integrity, transparency, and stewardship of resources. Establish clear governance, auditability, and feedback loops; publish decisions and results; admit and correct mistakes.",
+      "Act with integrity, transparency, and stewardship of resources. Establish clear governance, auditability, and feedback loops. Publish decisions and results. Admit and correct mistakes.",
     icon: CheckCircle2,
   },
   {
     title: "Sustainability",
     desc:
-      "Deliver benefits that last without degrading environmental or social systems. Plan for maintenance, financing, and local capacity; reduce emissions and waste; steward land, water, and biodiversity.",
+      "Deliver benefits that last without degrading environmental or social systems. Plan for maintenance, financing, and local capacity. Reduce emissions and waste. Steward land, water, and biodiversity.",
     icon: Leaf,
   },
 ];
@@ -205,7 +205,7 @@ export default function Worthwhile() {
           transition={{ delay: 0.2, duration: 0.45, ease: easeOut }}
         >
           A people-centered approach to development that avoids disempowerment,
-          reduces inequality, and strengthens communities — guided by seven core goals.
+          reduces inequality, and strengthens communities — guided by seven key values.
         </motion.p>
       </section>
 
@@ -216,7 +216,7 @@ export default function Worthwhile() {
             ref={sevenGoalsRef}
             className="text-2xl md:text-3xl font-semibold text-emerald-800 text-center"
           >
-            The Seven Goals
+            The Seven Values
           </h2>
           <motion.p
             className="mt-3 text-gray-700 leading-relaxed text-[15px] md:text-base text-center"
@@ -224,8 +224,7 @@ export default function Worthwhile() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: easeOut }}
           >
-            Each goal represents a dimension of ethical, sustainable development. Together,
-            they ensure that growth uplifts people, preserves dignity, and protects the planet.
+            At the heart of the Development Ethics Toolkit are seven core values of worthwhile development, drawn from the Routledge Handbook of Development Ethics. These values guide every tool, evaluation framework, and recommendation within this platform, ensuring that development efforts are not only effective but also equitable, human-centered, and ethically grounded. By centralizing these values, the Development Ethics Toolkit helps development practitioners, policymakers, and scholars navigate towards thoughtful decisions that prioritize human well-being and guard against the pitfalls of maldevelopment.
           </motion.p>
         </div>
       </section>

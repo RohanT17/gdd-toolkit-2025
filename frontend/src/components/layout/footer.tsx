@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white/90">Tools</h3>
             <ul className="mt-3 space-y-2 text-sm text-white/70">
-              <li><a className="hover:text-emerald-400" href="/ai-business-ethics-canvas"> AI Business Ethics Canvas</a></li>
+              <li><a className="hover:text-emerald-400" href="https://main.dn6y4rvhmhz3f.amplifyapp.com/"> AI Business Ethics Canvas</a></li>
               <li><a className="hover:text-emerald-400" href="https://main.dc0y8ib3ovhbx.amplifyapp.com/"> AI Dashboard</a></li>
               <li><a className="hover:text-emerald-400" href="/ethics-of-innovation">Ethics of Innovation</a></li>
               <li><a className="hover:text-emerald-400" href="/human-centered-design">Human Centered Design</a></li>
@@ -35,7 +35,7 @@ export default function Footer() {
             <h3 className="font-semibold text-white/90">Contact</h3>
             <p className="mt-3 text-sm text-white/70">Questions or feedback?</p>
             <a
-              href="mailto:bhuffman@umd.edu"
+              href="mailto:gddfire@gmail.com"
               className="mt-2 inline-block rounded-full bg-emerald-600 px-4 py-2 text-sm font-medium text-black hover:bg-emerald-700"
             >
               Email Us

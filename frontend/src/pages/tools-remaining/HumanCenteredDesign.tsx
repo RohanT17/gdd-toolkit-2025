@@ -66,7 +66,7 @@ export default function HumanCenteredDesign() {
             transition={{ duration: 0.6, ease: easeOut }}
           >
            There are several factors that must be taken into consideration during the process of designing, including its functionalities, end-users, and general usability. 
-           However, designers occasionally their own experiences and insights, in turn influencing the way these factors are taken into account. 
+           However, designers occasionally use their own experiences and insights, in turn influencing the way these factors are taken into account. 
            To develop a truly useful and inclusive toolkit, it is necessary to take into consideration the design choices' effects on all sorts of end-users and ensure that the resulting product benefits everyone fairly.
           </motion.p>
         </section>
@@ -86,7 +86,7 @@ export default function HumanCenteredDesign() {
            Even when it is not feasible to predict the needs of all potential users, efforts must be made to create the design as user-friendly and inclusive as it possibly can. 
            The conceptualization of development ethics prompts us to ask whether or not our design decisions directly address the needs of the user or only our own presumptions. 
            Human-centered design facilitates it to ask such questions by prioritizing empathy, feedback, and collaboration among designers and their potential beneficiaries in the entire process of development. 
-           One approach that effectively ensures that the toolkit is meaningful and useful as well as accessible by design to the user is Stanford’s iterative 5-step d.school model: Empathize, Define, Ideate, Prototype, Test.
+           One approach that effectively ensures that the toolkit is meaningful and useful as well as accessible by design to the user is Stanford’s iterative 5-step D.School Model: Empathize, Define, Ideate, Prototype, Test.
           </motion.p>
         </section>
         <div className="white-Box">
@@ -332,7 +332,7 @@ export default function HumanCenteredDesign() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: easeOut }}
           >
-            The following quiz will test you on common Human-centered design knowledge and terms.
+            The following quiz will test you on common Human-Centered Design knowledge and terms.
           </motion.p>
         </section>
       </div>

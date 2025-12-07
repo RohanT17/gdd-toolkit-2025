@@ -49,7 +49,7 @@ export default function CapabilityApproach() {
                 />
                 <ul className="list-disc pl-6 text-gray space-y-3 mt-8">
                   <li> His research focused on societal inequalities.</li>
-                  <li> Views poverty and underdeveloped communities as a consequence of capability deprivations.</li>
+                  <li> He views poverty and underdeveloped communities as a consequence of capability deprivations.</li>
                   <li> He believed development was too complex for a single path to improve everyone’s lives.</li>
                 </ul>
             </div>
@@ -65,7 +65,7 @@ export default function CapabilityApproach() {
               <ul className="list-disc pl-6 text-gray space-y-3 mt-8">
                 <li> Helped form the two major schools of thought in the human development and capabilities field.</li>
                 <li> Her philosophy is rooted in ten explicitly stated central capabilities needed for development. </li>
-                <li> Believed that Satisfying these central capabilities, which are physical, social, and, emotional, can be a way to achieve justice.</li>
+                <li> She believed that satisfying these central capabilities, which are physical, social, and, emotional, can be a way to achieve justice.</li>
               </ul>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function CapabilityApproach() {
             className="w-full h-[500px] rounded-xl object-cover"
           >
           <source
-            src="http://18.233.151.140/wp-content/uploads/2024/11/Cabability-approach-video.mp4"
+            src="/assets/Cabability-approach-video.mp4"
             type="video/mp4"
           />
           </video>

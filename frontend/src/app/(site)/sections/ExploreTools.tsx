@@ -15,7 +15,7 @@ const toolSlides: ToolSlide[] = [
     id: "ethics-of-innovation",
     label: "Interactive Tool",
     title: "Ethics of Innovation",
-    subtitle: "Interactive Global Dev Explorer",
+    subtitle: "Interactive Global Development Explorer",
     href: "/ethics-of-innovation",
     icon: <Compass className="h-8 w-8 text-emerald-200" />,
   },
@@ -90,7 +90,7 @@ export default function ExploreTools() {
             viewport={{ once: true }}
             className="mt-4 text-base md:text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed"
           >
-            The <b>Development Ethics Toolkit</b> is a free, open-access platform that helps development practitioners, policy makers, and academics design, build, and test social impact projects that are effective, inclusive, and truly ethical. The toolkit incorporates values-based decision-making and human-centered design into every stage of the process. With tools for project planning, evaluation, and AI-powered project-design, plus a dashboard to assess and recommend AI tools for ethical use—our platform ensures that anyone, anywhere, can create development solutions that incorporate the values of worthwhile development, while avoiding the pitfalls of maldevelopment.
+            The <b>Development Ethics Toolkit</b> is a free, open-access platform that helps development practitioners, policy makers, and academics design, build, and test social impact projects that are effective, inclusive, and truly ethical. The toolkit incorporates values-based decision-making and human-centered design into every stage of the process. With tools for project planning, evaluation, and AI-powered project-design, plus a dashboard to assess and recommend AI tools for ethical use, our platform ensures that anyone, anywhere, can create development solutions that incorporate the values of worthwhile development, while avoiding the pitfalls of maldevelopment.
           </motion.p>
         </div>
 

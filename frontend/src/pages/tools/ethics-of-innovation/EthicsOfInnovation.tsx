@@ -35,8 +35,7 @@ const EthicsOfInnovation: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
-                        By utilizing the 9 principles of digital design: contrast, movement, repetition, proportion, balance, emphasis, 
-                        simplicity, functionality, accessibility, and incorporating ethics of innovation, you can effectively lead a 
+                        By utilizing the 9 Principles of Digital Design and incorporating ethics of innovation, you can effectively lead a 
                         project as a program manager in this simulation. In this role, you’ll have to decide how best to design you 
                         project while keeping ethics of innovation in mind! Try it out for yourself. 
                         <br /><br />

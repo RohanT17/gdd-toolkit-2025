@@ -40,10 +40,9 @@ export default function AIAssistant() {
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
-          onClick={(e) => {
-            e.preventDefault();
-            // Button doesn't go anywhere for now
-          }}
+          onClick={() => {
+            window.location.href = "https://main.dn6y4rvhmhz3f.amplifyapp.com/";
+          }}           
           className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-white font-medium shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 transition-colors"
         >
           Get Started

@@ -21,7 +21,7 @@ export default function Hero() {
             Development Ethics Toolkit
           </h1>
           <p className="mt-4 mx-auto max-w-3xl text-center text-base sm:text-lg md:text-xl text-white/90 font-medium">
-            Our toolkit gives you actionable frameworks, worksheets, and examples so teams can design, assess, and course-correct projects responsibly—without slowing momentum.
+          Our toolkit is a free, open-access platform that helps practitioners, policymakers, and scholars design, evaluate, and improve social impact projects ethically and effectively, with practical tools, resources, and AI-powered applications that support values-based and human-centered decision-making.
           </p>
         </div>
       </div>

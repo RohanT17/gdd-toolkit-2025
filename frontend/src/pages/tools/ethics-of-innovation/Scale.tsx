@@ -26,7 +26,7 @@ const Scale: React.FC = () => {
                         animate="visible"
                         variants={bannerVariants}
                     >
-                        Scale
+                        Design for Scale
                     </motion.h1>
                 </div>
             </header>
@@ -162,16 +162,6 @@ const Scale: React.FC = () => {
                         <br></br>
                         The case study above applied this design principle of designing for scale by allowing for their project to be readily expandable to new users and regions. This study applies the research to real world applications that can be interpreted by all users.
                     </motion.p>
-                    <div className="case-video-wrapper">
-                        <iframe
-                            className="case-video"
-                            src="https://www.youtube.com/embed/mSxpVRo3BLg?start=175"
-                            title="How to Create a Customer Journey Map"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-
                 </div>
             </section>
             <br></br>
