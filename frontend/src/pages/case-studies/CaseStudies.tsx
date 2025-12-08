@@ -4,7 +4,7 @@
  * Each card is labeled as either "Worthwhile Development" or "Maldevelopment"
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import CaseStudiesGrid from "@/components/case-studies/CaseStudiesGrid";
 import CaseStudyModal from "@/components/case-studies/CaseStudyModal";
@@ -26,6 +26,8 @@ export default function CaseStudies() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const simulationRef = useRef<HTMLHeadingElement>(null);
 
   // Fetch all case studies (both worthwhile and maldevelopment)
   useEffect(() => {
@@ -152,7 +154,47 @@ export default function CaseStudies() {
                     </motion.p>
                 </div>
             </section>
+        
+        {/* --- Section 2: Case Study Evaluation Methodology --- */}
+        <section className="content-section">
+        <div className="content-card">
+            <h2 ref={simulationRef} className="simulation-title">
+            Case Study Evaluation Methodology
+            </h2>
+            <motion.div
+            className="simulation-text"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, ease: easeOut }}
+            >
+            <iframe
+                src="/projectevaloldinternal.pdf" // can be relative path in public folder or an S3/HTTPS URL
+                width="100%"
+                height="400px"
+                style={{ border: "1px solid #ccc" }}
+                title="Case Study Evaluation Methodology"
+            ></iframe>
+            </motion.div>
+        </div>
+        </section>
 
+        {/* --- Section 3: Case Studies Intro --- */}
+        <section className="content-section">
+        <div className="content-card">
+            <h2 ref={simulationRef} className="simulation-title">
+            Case Study Gallery
+            </h2>
+            <motion.p
+            className="simulation-text"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, ease: easeOut }}
+            >
+            Use the search bar below, typing either the name of a case study or relevant keywords, to explore our comprehensive collection of case studies. Each entry is thoughtfully categorized as either "Worthwhile Development" or "Maldevelopment," providing clear insights into ethical practices and challenges in the field. Dive in to learn from real-world examples and enhance your understanding of value-driven development.
+            </motion.p>
+        </div>
+        </section>
+        
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-10">
         {/* Search Bar */}

@@ -13,6 +13,8 @@ export type CaseStudy = {
   keywords?: string[];
   regions?: string[];
   values?: string[];
+  relation_sdgs_values?: string;
+  summary?: string;
   // Additional fields that might exist
   [key: string]: unknown;
 };

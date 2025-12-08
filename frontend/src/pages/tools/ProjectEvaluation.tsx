@@ -253,7 +253,7 @@ const ProjectEvaluation: React.FC = () => {
             <section className="content-section">
                 <div className="content-card">
                     <h2 ref={simulationRef} className="simulation-title">
-                        The Evaluation Tool
+                        Project Evaluation Simulation
                     </h2>
                     <motion.p
                         className="simulation-text"
@@ -269,8 +269,24 @@ const ProjectEvaluation: React.FC = () => {
                             rel="noopener noreferrer"
                             className="text-emerald-600 font-semibold underline hover:text-emerald-700 transition-colors"
                         >
-                            Click to use the simulation and evaluate your project, program, and/or policy
+                            Click to use the simulation and evaluate your project, program, and/or policy.
                         </a>
+                        <br></br><br></br>
+                        See the methodology below for more details.
+                        <motion.div
+                        className="simulation-text"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, ease: easeOut }}
+                        >
+                        <iframe
+                            src="/projectevalnewexternal.pdf" // can be relative path in public folder or an S3/HTTPS URL
+                            width="100%"
+                            height="400px"
+                            style={{ border: "1px solid #ccc" }}
+                            title="Project Evaluation Methodology"
+                        ></iframe>
+                        </motion.div>
                     </motion.p>
                 </div>
             </section>

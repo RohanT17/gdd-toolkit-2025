@@ -232,10 +232,35 @@ export default function CaseStudyDetail() {
               </div>
             )}
 
+            {caseStudy.summary && (
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Summary</h3>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{caseStudy.summary}</p>
+              </div>
+            )}
+
             {caseStudy.lessons_learned && (
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Lessons Learned</h3>
                 <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{caseStudy.lessons_learned}</p>
+              </div>
+            )}
+
+            {/* {caseStudy.relation_sdgs_values && (() => {
+              const relationText = caseStudy.relation_sdgs_values;
+              if (!relationText || typeof relationText !== 'string') return null as React.ReactNode;
+              return (
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Relation to SDGs & Values</h3>
+                  <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{relationText}</p>
+                </div>
+              ) as React.ReactNode;
+            })()} */}
+
+            {caseStudy.relation_sdgs_values && (
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Relation to SDGs and Values</h3>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{caseStudy.relation_sdgs_values}</p>
               </div>
             )}
 
@@ -317,17 +342,6 @@ export default function CaseStudyDetail() {
                 <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{caseStudy.evaluation}</p>
               </div>
             )}
-
-            {(() => {
-              const relationText = caseStudy.relation_sdgs_values;
-              if (!relationText || typeof relationText !== 'string') return null as React.ReactNode;
-              return (
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Relation to SDGs & Values</h3>
-                  <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{relationText}</p>
-                </div>
-              ) as React.ReactNode;
-            })()}
           </div>
         </div>
       </div>
