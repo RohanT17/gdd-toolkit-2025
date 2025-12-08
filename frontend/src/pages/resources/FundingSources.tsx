@@ -526,7 +526,7 @@ const grants: Grant[] = [
     amount: "N/A",
     summary:
       "",
-    timePeriod: "November 0th, 2025",
+    timePeriod: "November 9th, 2025",
     eligibility: "Others (see text field entitled 'Additional Information on Eligibility' for clarification). City or township governments. Independent school districts. Native American tribal governments (Federally recognized). County governments. State governments. Nonprofits that do not have a 501(c)(3) status with the IRS, other than institutions of higher education. Public and State controlled institutions of higher education. Special district governments. Private institutions of higher education. Nonprofits having a 501(c)(3) status with the IRS, other than institutions of higher education. Public housing authorities/Indian housing authorities. Native American tribal organizations (other than Federally recognized tribal governments)",
     pastAwards: "Not Specified",
   }
@@ -602,7 +602,7 @@ export default function FundingSources() {
   }, [query]);
 
   return (
-    <main className="page">
+    <div className="page">
         <header className="mission-banner">
             <motion.h1
                 className="mission-title"
@@ -638,6 +638,6 @@ export default function FundingSources() {
         </section>
         <br></br>
       </div>
-    </main>
+    </div>
   );
 }
