@@ -253,7 +253,7 @@ const ProjectEvaluation: React.FC = () => {
             <section className="content-section">
                 <div className="content-card">
                     <h2 ref={simulationRef} className="simulation-title">
-                        The Evaluation Tool
+                        Project Evaluation Simulation
                     </h2>
                     <motion.p
                         className="simulation-text"
@@ -271,9 +271,6 @@ const ProjectEvaluation: React.FC = () => {
                         >
                             Click to use the simulation and evaluate your project, program, and/or policy
                         </a>
-                        <br></br><br></br>
-                        Disclaimer: The <a href="/case-studies">case studies</a> provided here are evalated with an older methodology, where a letter grade (A, B, C, F)
-                        is given for each value of worthwhile development based on the number of indicators checked for that value (0-1 = F (Poor), 2-3 = C (Developing), 4 = B (Sufficient), 5 = A (Superior)).
                     </motion.p>
                 </div>
             </section>
