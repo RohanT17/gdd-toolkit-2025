@@ -10,6 +10,8 @@ import CaseStudiesGrid from "@/components/case-studies/CaseStudiesGrid";
 import CaseStudyModal from "@/components/case-studies/CaseStudyModal";
 import { fetchWorthwhile, fetchMaldevelopment } from "@/api/caseStudies";
 import type { CaseStudy } from "@/types/caseStudies";
+import { easeOut, motion } from "framer-motion";
+import "./CaseStudies.css";
 
 // Extended CaseStudy type with segment label
 type CaseStudyWithSegment = CaseStudy & {
@@ -137,6 +139,19 @@ export default function CaseStudies() {
           <h1 className="text-4xl md:text-5xl font-bold text-center">Case Studies</h1>
         </div>
             </header>
+    
+            <section className="content-section">
+                <div className="content-card">
+                    <motion.p
+                        className="simulation-text"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, ease: easeOut }}
+                    >
+                    This tool includes a dedicated library of case studies that highlight both exemplary development practices and real-world instances of maldevelopment. These cases give users a grounded understanding of how ethical challenges unfold in practice—and how values-based, human-centered approaches can lead to better outcomes. By learning from successes and missteps alike, users of our toolkit can more confidently apply these lessons and principles to their own projects.
+                    </motion.p>
+                </div>
+            </section>
 
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-10">

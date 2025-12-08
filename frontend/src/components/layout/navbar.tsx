@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, AlertTriangle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Logo from '@/components/Logo'
 
@@ -46,6 +46,7 @@ export default function Navbar() {
   const [open, setOpen] = useState<number | null>(null)
   const [mobile, setMobile] = useState(false)
   const [mobileOpenMenu, setMobileOpenMenu] = useState<number | null>(null)
+  const [showMessage, setShowMessage] = useState(false) // toggle alert manually
   const closeTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
@@ -227,6 +228,28 @@ export default function Navbar() {
                 </motion.a>
               )
             )}
+
+            {/* Triangle alert icon */}
+            <div className="relative ml-4">
+              <Button size="icon" variant="default" onClick={() => setShowMessage(v => !v)} aria-label="Prerelease info">
+                <AlertTriangle className="w-5 h-5 text-red-600" />
+              </Button>
+
+              {/* Alert message below the icon */}
+              <AnimatePresence>
+                {showMessage && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -5 }}
+                    animate={{ opacity: 1, y: 5 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full mt-2 right-0 w-70 bg-red-600 text-white p-3 rounded-lg shadow-lg z-50"
+                  >
+                    This is a prerelease version of our Development Ethics Toolkit. For feedback and issues, please email <a href="mailto:gddfire@gmail.com" className="underline font-semibold">gddfire@gmail.com</a>.
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </nav>
 
           {/* MOBILE TOGGLE */}

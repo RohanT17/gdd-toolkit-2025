@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Hero from './hero'
 import ExploreTools from '@/app/(site)/sections/ExploreTools'
@@ -10,7 +10,19 @@ import { Play } from 'lucide-react'
 
 export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [showPrerelease, setShowPrerelease] = useState(false) // NEW
   const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Show prerelease alert briefly after splash
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPrerelease(true)
+      // Hide after 2 seconds
+      const hideTimer = setTimeout(() => setShowPrerelease(false), 2000)
+      return () => clearTimeout(hideTimer)
+    }, 1250)
+    return () => clearTimeout(timer)
+  }, [])
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -71,6 +83,14 @@ export default function HomePage() {
   return (
     <>
       <Splash />
+
+      {/* Splash-triggered alert */}
+      {showPrerelease && (
+        <div className="fixed bottom-6 right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50">
+          This is a prerelease version of our Development Ethics Toolkit. For feedback and issues, please email <a href="mailto:gddfire@gmail.com" className="underline font-semibold">gddfire@gmail.com</a>.
+        </div>
+      )}
+
       <motion.div
         initial="hidden"
         animate="visible"
