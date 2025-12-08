@@ -10,7 +10,7 @@ import { Play } from 'lucide-react'
 
 export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [showPrerelease, setShowPrerelease] = useState(false) // NEW
+  const [showPrerelease, setShowPrerelease] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   // Show prerelease alert briefly after splash

@@ -253,7 +253,7 @@ const ProjectEvaluation: React.FC = () => {
             <section className="content-section">
                 <div className="content-card">
                     <h2 ref={simulationRef} className="simulation-title">
-                        Project Evaluation Simulation
+                        The Evaluation Tool
                     </h2>
                     <motion.p
                         className="simulation-text"

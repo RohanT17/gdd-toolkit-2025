@@ -243,13 +243,14 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 5 }}
                     exit={{ opacity: 0, y: -5 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full mt-2 right-0 w-70 bg-red-600 text-white p-3 rounded-lg shadow-lg z-50"
+                    className="absolute top-full mt-2 right-0 w-64 bg-red-600 text-white p-3 rounded-lg shadow-lg z-50"
                   >
-                    This is a prerelease version of our Development Ethics Toolkit. For feedback and issues, please email <a href="mailto:gddfire@gmail.com" className="underline font-semibold">gddfire@gmail.com</a>.
+                    This is a prerelease version of our Development Ethics Toolkit. For feedback and issues, please email <a href="mailto:XX@gmail.com" className="underline font-semibold">XX@gmail.com</a>.
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
+            
           </nav>
 
           {/* MOBILE TOGGLE */}

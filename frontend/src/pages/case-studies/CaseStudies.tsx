@@ -10,8 +10,8 @@ import CaseStudiesGrid from "@/components/case-studies/CaseStudiesGrid";
 import CaseStudyModal from "@/components/case-studies/CaseStudyModal";
 import { fetchWorthwhile, fetchMaldevelopment } from "@/api/caseStudies";
 import type { CaseStudy } from "@/types/caseStudies";
-import { easeOut, motion } from "framer-motion";
 import "./CaseStudies.css";
+import { easeOut, motion } from "framer-motion";
 
 // Extended CaseStudy type with segment label
 type CaseStudyWithSegment = CaseStudy & {
@@ -139,7 +139,7 @@ export default function CaseStudies() {
           <h1 className="text-4xl md:text-5xl font-bold text-center">Case Studies</h1>
         </div>
             </header>
-    
+        
             <section className="content-section">
                 <div className="content-card">
                     <motion.p
