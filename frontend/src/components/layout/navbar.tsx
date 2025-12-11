@@ -37,7 +37,9 @@ const MENUS: Menu[] = [
   {
     label: 'Resources',
     items: [
-      { label: 'Funding Sources', href: '/funding-sources' }
+      { label: 'Funding Sources', href: '/funding-sources' },
+      { label: 'Podcast', href: '/podcast' },
+      { label: 'Acknowledgements', href: '/acknowledgements'}
     ]
   }
 ]

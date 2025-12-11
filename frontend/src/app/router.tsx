@@ -23,7 +23,8 @@ const ProjectEvaluation = lazy(() => import("@/pages/tools/ProjectEvaluation"));
 const CaseStudies = lazy(() => import ("@/pages/case-studies/CaseStudies"));
 const CaseStudyDetail = lazy(() => import("@/pages/case-studies/CaseStudyDetail"));
 const FundingSources = lazy(() => import ("@/pages/resources/FundingSources"));
-const Acknowledgements = lazy(() => import ("@/pages/about/Acknowledgements"));
+const Podcast = lazy(() => import ("@/pages/resources/Podcast"));
+const Acknowledgements = lazy(() => import ("@/pages/resources/Acknowledgements"));
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
       { path: "case-studies", element: <CaseStudies />},
       { path: "case-studies/:id", element: <CaseStudyDetail />},
       { path: "funding-sources", element: <FundingSources />},
+      { path: "podcast", element: <Podcast />},
       { path: "acknowledgements", element: <Acknowledgements />},
     ],
   },

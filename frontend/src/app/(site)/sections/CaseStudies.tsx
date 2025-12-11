@@ -19,7 +19,7 @@ export default function CaseStudies() {
         <div className="mt-12 grid grid-cols-12 gap-6 md:gap-8">
           {/* Left feature */}
           <SlideInLeft className="col-span-12 md:col-span-7">
-            <a href="/case-studies" aria-label="Smart Nation Singapore case" className="group relative overflow-hidden rounded-3xl shadow-sm hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
+            <a href="/case-studies?id=452a4ce6-286e-4903-87ea-63477f0841cd" aria-label="Smart Nation Singapore case" className="group relative overflow-hidden rounded-3xl shadow-sm hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
               <img src="/singapore.jpg" alt="Smart Nation Singapore skyline" width={1400} height={900} className="h-64 md:h-80 w-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">
@@ -44,7 +44,7 @@ export default function CaseStudies() {
           {/* Right column */}
           <div className="col-span-12 md:col-span-5 space-y-6 md:-mt-12">
             <SlideInRight delay={0.06}>
-              <a href="/case-studies" aria-label="Health Professional Education and Training case" className="group relative overflow-hidden rounded-3xl shadow-sm hover:shadow-md transition-shadow block focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
+              <a href="/case-studies?id=eec11844-bf7c-4dec-9c9c-f28666a9076c" aria-label="Health Professional Education and Training case" className="group relative overflow-hidden rounded-3xl shadow-sm hover:shadow-md transition-shadow block focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
                 <img src="/healthtraining-1.png" alt="Health Professional Education and Training" width={1200} height={800} className="h-64 w-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5">
@@ -58,19 +58,19 @@ export default function CaseStudies() {
             <StaggerChildren>
               <div className="rounded-2xl bg-white/70 backdrop-blur divide-y divide-gray-200 shadow-sm">
                 <FadeIn>
-                  <a href="/case-studies" className="flex items-center justify-between px-5 py-4 hover:translate-x-0.5 transition-transform focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
+                  <a href="/case-studies?id=6bb6b259-0cbd-4cf7-9597-cd2c9dc0e10d" className="flex items-center justify-between px-5 py-4 hover:translate-x-0.5 transition-transform focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
                     <span className="font-medium text-gray-900">Mental health in South Korea</span>
                     <span aria-hidden="true" className="text-gray-400">→</span>
                   </a>
                 </FadeIn>
                 <FadeIn>
-                  <a href="/case-studies" className="flex items-center justify-between px-5 py-4 hover:translate-x-0.5 transition-transform focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
+                  <a href="/case-studies?id=317ea7a0-ea88-444f-8601-b351dd7a8744" className="flex items-center justify-between px-5 py-4 hover:translate-x-0.5 transition-transform focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
                     <span className="font-medium text-gray-900">ZHUN housing project</span>
                     <span aria-hidden="true" className="text-gray-400">→</span>
                   </a>
                 </FadeIn>
                 <FadeIn>
-                  <a href="/case-studies" className="flex items-center justify-between px-5 py-4 hover:translate-x-0.5 transition-transform focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
+                  <a href="/case-studies?id=c167ea2e-4172-4571-8081-42b0b3db0557" className="flex items-center justify-between px-5 py-4 hover:translate-x-0.5 transition-transform focus:outline-none focus:ring-2 focus:ring-emerald-600/60">
                     <span className="font-medium text-gray-900">Health Service improvement</span>
                     <span aria-hidden="true" className="text-gray-400">→</span>
                   </a>
