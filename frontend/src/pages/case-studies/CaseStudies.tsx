@@ -4,7 +4,7 @@
  * Each card is labeled as either "Worthwhile Development" or "Maldevelopment"
  */
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import CaseStudiesGrid from "@/components/case-studies/CaseStudiesGrid";
 import CaseStudyModal from "@/components/case-studies/CaseStudyModal";
@@ -26,8 +26,6 @@ export default function CaseStudies() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const simulationRef = useRef<HTMLHeadingElement>(null);
 
   // Fetch all case studies (both worthwhile and maldevelopment)
   useEffect(() => {
@@ -151,49 +149,22 @@ export default function CaseStudies() {
                         transition={{ duration: 0.6, ease: easeOut }}
                     >
                     This tool includes a dedicated library of case studies that highlight both exemplary development practices and real-world instances of maldevelopment. These cases give users a grounded understanding of how ethical challenges unfold in practice—and how values-based, human-centered approaches can lead to better outcomes. By learning from successes and missteps alike, users of our toolkit can more confidently apply these lessons and principles to their own projects.
+                    <br></br>
+                    <br></br>
+                    See the <a
+                        href="/projectevaloldinternal.pdf" // link to methodology PDF
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-600 font-semibold underline hover:text-emerald-700 transition-colors"
+                    >
+                        case study evaluation methodology
+                    </a> for more details.
+                    <br></br>
+                    <br></br>
+                    Use the search bar below, typing either the name of a case study or relevant keywords, to explore our comprehensive collection of case studies. Each entry is thoughtfully categorized as either "Worthwhile Development" or "Maldevelopment," providing clear insights into ethical practices and challenges in the field. Dive in to learn from real-world examples and enhance your understanding of value-driven development.
                     </motion.p>
                 </div>
             </section>
-        
-        {/* --- Section 2: Case Study Evaluation Methodology --- */}
-        <section className="content-section">
-        <div className="content-card">
-            <h2 ref={simulationRef} className="simulation-title">
-            Case Study Evaluation Methodology
-            </h2>
-            <motion.div
-            className="simulation-text"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, ease: easeOut }}
-            >
-            <iframe
-                src="/projectevaloldinternal.pdf" // can be relative path in public folder or an S3/HTTPS URL
-                width="100%"
-                height="400px"
-                style={{ border: "1px solid #ccc" }}
-                title="Case Study Evaluation Methodology"
-            ></iframe>
-            </motion.div>
-        </div>
-        </section>
-
-        {/* --- Section 3: Case Studies Intro --- */}
-        <section className="content-section">
-        <div className="content-card">
-            <h2 ref={simulationRef} className="simulation-title">
-            Case Study Gallery
-            </h2>
-            <motion.p
-            className="simulation-text"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, ease: easeOut }}
-            >
-            Use the search bar below, typing either the name of a case study or relevant keywords, to explore our comprehensive collection of case studies. Each entry is thoughtfully categorized as either "Worthwhile Development" or "Maldevelopment," providing clear insights into ethical practices and challenges in the field. Dive in to learn from real-world examples and enhance your understanding of value-driven development.
-            </motion.p>
-        </div>
-        </section>
         
       {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 py-10">

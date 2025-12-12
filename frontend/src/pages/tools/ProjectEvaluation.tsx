@@ -251,44 +251,45 @@ const ProjectEvaluation: React.FC = () => {
 
             {/* --- Section 6: Tool Presentation--- */}
             <section className="content-section">
-                <div className="content-card">
-                    <h2 ref={simulationRef} className="simulation-title">
-                        Project Evaluation Simulation
-                    </h2>
-                    <motion.p
-                        className="simulation-text"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, ease: easeOut }}
-                    >
-                        Walk through the Project Evaluation simulation. It will ask you a series of questions in three phases: 1) the project design phase, 2) the project implementation phase, and 3) the project outcomes phase.
-                        <br></br><br></br>
-                        <a
-                            href="https://www.canva.com/design/DAGlZMBzaxs/kfHOiechitv_JGXKeMXwCA/view?utm_content=DAGlZMBzaxs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0806b2bb8d#1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-emerald-600 font-semibold underline hover:text-emerald-700 transition-colors"
-                        >
-                            Click to use the simulation and evaluate your project, program, and/or policy.
-                        </a>
-                        <br></br><br></br>
-                        See the methodology below for more details.
-                        <motion.div
-                        className="simulation-text"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, ease: easeOut }}
-                        >
-                        <iframe
-                            src="/projectevalnewexternal.pdf" // can be relative path in public folder or an S3/HTTPS URL
-                            width="100%"
-                            height="400px"
-                            style={{ border: "1px solid #ccc" }}
-                            title="Project Evaluation Methodology"
-                        ></iframe>
-                        </motion.div>
-                    </motion.p>
-                </div>
+            <div className="content-card">
+                <h2 ref={simulationRef} className="simulation-title">
+                Project Evaluation Simulation
+                </h2>
+                <motion.p
+                className="simulation-text"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, ease: easeOut }}
+                >
+                Walk through the Project Evaluation simulation. It will ask you a series of questions in three phases: 1) the project design phase, 2) the project implementation phase, and 3) the project outcomes phase.
+                <br /><br />
+                See the <a
+                    href="/projectevalnewexternal.pdf" // link to methodology PDF
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 font-semibold underline hover:text-emerald-700 transition-colors"
+                >
+                    project evaluation methodology
+                </a> for more details.
+                </motion.p>
+
+                {/* Embedded Canva presentation */}
+                <motion.div
+                className="mt-6 justify-center flex"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, ease: easeOut }}
+                >
+                <iframe
+                    src="https://www.canva.com/design/DAGlZMBzaxs/kfHOiechitv_JGXKeMXwCA/view?embed"
+                    width="80%"
+                    height="480"
+                    style={{ border: "1px solid #ccc", borderRadius: "8px" }}
+                    allowFullScreen
+                    title="Project Evaluation Simulation"
+                ></iframe>
+                </motion.div>
+            </div>
             </section>
             <br></br>
         </div>
