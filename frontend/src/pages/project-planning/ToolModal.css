@@ -45,6 +45,7 @@
     width: 100%;
     height: 300px; /* fixed height, adjust as needed */
     object-fit: contain; /* or 'cover' if you want it cropped */
+    align-items: center;
     margin: 1rem 0;
     border-radius: 0.75rem;
 }

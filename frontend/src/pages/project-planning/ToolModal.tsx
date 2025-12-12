@@ -18,7 +18,8 @@ type ProjectPlanningTool = {
     drawbacks: Bullet[];
     example: Bullet[];
     resources: Bullet[];
-    use_case_video: string;
+    use_case_video?: string;
+    slideshow?: string;
     evaluation: Bullet[];
 };
 
@@ -30,10 +31,13 @@ export default function ToolModal({
     onClose: () => void;
 }) {
     const typeColors: Record<string, string> = {
-        "Six Sigma": "#dbeafe",
-        "Process Mapping": "#fef3c7",
-        "Decision Making": "#fce7f3",
-    };
+        "Six Sigma": "#dbeafe",          // light blue
+        "Process Mapping": "#fef3c7",    // light yellow
+        "Decision Making": "#fce7f3",    // light pink
+        "User-Centric": "#d1fae5",       // light green
+        "Efficiency/Innovation": "#fff7ed", // light orange
+        "Quality Management": "#ede9fe"  // light purple
+    };    
 
     const timeColors: Record<string, string> = {
         "Short-term": "#dcfce7",
@@ -123,21 +127,35 @@ export default function ToolModal({
                         <BulletList bullets={tool.resources} isLink={true} />
                     </div>
                     <div className="modal-card">
-                        <h3>Use Case Video</h3>
-                        {tool.use_case_video.endsWith(".mp4") ? (
-                            <video
-                                src={tool.use_case_video}
-                                controls
-                                className="modal-video"
-                            />
-                        ) : (
+                        <h3>Use Case Video / Slideshow</h3>
+                        {tool.use_case_video ? (
+                            tool.use_case_video.endsWith(".mp4") ? (
+                                <video
+                                    src={tool.use_case_video}
+                                    controls
+                                    className="modal-video"
+                                />
+                            ) : (
+                                <iframe
+                                    className="modal-video"
+                                    src={tool.use_case_video}
+                                    title="Tool Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            )
+                        ) : tool.slideshow ? (
                             <iframe
                                 className="modal-video"
-                                src={tool.use_case_video}
-                                title="Tool Video"
+                                src={tool.slideshow}
+                                title="Tool Slideshow"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             ></iframe>
+                        ) : (
+                            <p style={{ textAlign: "center", color: "#6b7280" }}>
+                                No video or slideshow available.
+                            </p>
                         )}
                     </div>
                 </div>

@@ -116,7 +116,7 @@ export default function ToolsCarousel({ slides, autoPlayInterval = 7000 }: Tools
         <motion.button
           onClick={prevSlide}
           aria-label="Previous tool"
-          className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-slate-950/80 backdrop-blur hover:bg-emerald-400/20 hover:border-emerald-300/60 transition-colors z-20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+          className="cursor-pointer absolute left-3 md:left-4 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-slate-950/80 backdrop-blur hover:bg-emerald-400/20 hover:border-emerald-300/60 transition-colors z-20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -127,7 +127,7 @@ export default function ToolsCarousel({ slides, autoPlayInterval = 7000 }: Tools
         <motion.button
           onClick={nextSlide}
           aria-label="Next tool"
-          className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-slate-950/80 backdrop-blur hover:bg-emerald-400/20 hover:border-emerald-300/60 transition-colors z-20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+          className="cursor-pointer absolute right-3 md:right-4 top-1/2 -translate-y-1/2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-slate-950/80 backdrop-blur hover:bg-emerald-400/20 hover:border-emerald-300/60 transition-colors z-20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -142,7 +142,7 @@ export default function ToolsCarousel({ slides, autoPlayInterval = 7000 }: Tools
             key={slide.id}
             onClick={() => goToSlide(i)}
             aria-label={`Go to slide ${i + 1}: ${slide.title}`}
-            className="relative h-2.5 w-2.5 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+            className="cursor-pointer relative h-2.5 w-2.5 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950"
             animate={i === activeIndex ? { scale: 1.4 } : { scale: 1 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >

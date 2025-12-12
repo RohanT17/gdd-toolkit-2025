@@ -43,7 +43,7 @@ export default function AIAssistant() {
           onClick={() => {
             window.location.href = "https://main.dn6y4rvhmhz3f.amplifyapp.com/";
           }}           
-          className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-white font-medium shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 transition-colors"
+          className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-white font-medium shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2 transition-colors cursor-pointer"
         >
           Get Started
           <span aria-hidden="true">→</span>

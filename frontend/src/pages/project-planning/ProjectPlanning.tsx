@@ -1,6 +1,14 @@
 import { useRef, useState } from "react";
 import { motion, easeOut } from "framer-motion";
 import "./ProjectPlanning.css";
+
+import agileData from "./tools_data/agile.json";
+import dmaicData from "./tools_data/dmaic.json";
+import leanData from "./tools_data/lean.json";
+import waterfallData from "./tools_data/waterfall.json";
+import criticalchainData from "./tools_data/criticalchain.json";
+import journeymappingData from "./tools_data/journeymapping.json";
+import personaData from "./tools_data/persona.json";
 import sipocData from "./tools_data/sipoc.json";
 import garvins8Data from "./tools_data/garvin8.json";
 import dmadvData from "./tools_data/dmadv.json";
@@ -10,6 +18,7 @@ import gapanalysisData from "./tools_data/gapanalysis.json";
 import pughchartData from "./tools_data/pughchart.json";
 import montecarloData from "./tools_data/montecarlo.json";
 import forceanalysisData from  "./tools_data/forceanalysis.json";
+
 import ToolModal from "./ToolModal";
 
 const ProjectPlanning: React.FC = () => {
@@ -38,12 +47,13 @@ const ProjectPlanning: React.FC = () => {
         drawbacks: Bullet[];
         example: Bullet[];
         resources: Bullet[];
-        use_case_video: string;
+        use_case_video?: string;
+        slideshow?: string;
         evaluation: Bullet[];
     }
 
     // === Tools Data ===
-    const tools: ProjectPlanningTool[] = [sipocData, garvins8Data, dmadvData, dmediData, strategycanvasData, gapanalysisData, pughchartData, montecarloData, forceanalysisData];
+    const tools: ProjectPlanningTool[] = [agileData, dmaicData, leanData, waterfallData, criticalchainData, journeymappingData, personaData, sipocData, garvins8Data, dmadvData, dmediData, strategycanvasData, gapanalysisData, pughchartData, montecarloData, forceanalysisData];
     // === Search State ===
     const [search, setSearch] = useState("");
     // === Modal State ===
@@ -60,10 +70,13 @@ const ProjectPlanning: React.FC = () => {
 
     // === Badge Colors ===
     const typeColors: Record<string, string> = {
-        "Six Sigma": "#dbeafe",
-        "Process Mapping": "#fef3c7",
-        "Decision Making": "#fce7f3",
-    };
+        "Six Sigma": "#dbeafe",          // light blue
+        "Process Mapping": "#fef3c7",    // light yellow
+        "Decision Making": "#fce7f3",    // light pink
+        "User-Centric": "#d1fae5",       // light green
+        "Efficiency/Innovation": "#fff7ed", // light orange
+        "Quality Management": "#ede9fe"  // light purple
+    };    
 
     const timeColors: Record<string, string> = {
         "Short-term": "#dcfce7",

@@ -162,15 +162,15 @@ export default function HomePage() {
         <div className="py-8" />
 
         {/* IMAGE WITH TOP GRADIENT FADE */}
-        <motion.div className="relative" variants={itemVariants}>
-            {/* Gradient overlay (top fade) */}
-            <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white to-transparent pointer-events-none"></div>
-
-            <motion.img
+        <motion.img
             src="/assets/images/footer_image.png"
-            className="w-full"
-            />
-        </motion.div>
+            className="relative top-0 left-0 w-full h-full bg-gradient-to-b from-white to-transparent pointer-events-none"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+        />
       </motion.div>
     </>
   )
